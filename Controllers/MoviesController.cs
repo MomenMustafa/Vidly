@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
@@ -43,11 +45,17 @@ namespace Vidly.Controllers
             return Content("Id= " + id);
         }
 
-        //public ActionResult Index()
-        //{
-        //    var movies = _context.Movies.Include(c => c.Genre).ToList();
-        //    return View(movies);
-        //}
+        public ActionResult Index()
+        {
+            var movies = _context.Movies.Include(c => c.Genre).ToList();
+            return View(movies);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var genre = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
+            return View(genre);
+        }
 
         [Route("movies/released/{year:regex(\\d{4}):range(2015,2020)}/{month:regex(\\d{2}):range(1,12)}")]
         public ActionResult ByReleaseDate(int year, int month)

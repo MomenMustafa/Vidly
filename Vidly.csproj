@@ -154,6 +154,18 @@
     <Compile Include="Migrations\202303260156194_InsertNameAtMembershipTypes.designer.cs">
       <DependentUpon>202303260156194_InsertNameAtMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303260243190_AddGenres.cs" />
+    <Compile Include="Migrations\202303260243190_AddGenres.designer.cs">
+      <DependentUpon>202303260243190_AddGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303260328001_PopulateGenre.cs" />
+    <Compile Include="Migrations\202303260328001_PopulateGenre.designer.cs">
+      <DependentUpon>202303260328001_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303260351148_AddMovies.cs" />
+    <Compile Include="Migrations\202303260351148_AddMovies.designer.cs">
+      <DependentUpon>202303260351148_AddMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -219,6 +231,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -259,6 +272,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303260156194_InsertNameAtMembershipTypes.resx">
       <DependentUpon>202303260156194_InsertNameAtMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303260243190_AddGenres.resx">
+      <DependentUpon>202303260243190_AddGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303260328001_PopulateGenre.resx">
+      <DependentUpon>202303260328001_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303260351148_AddMovies.resx">
+      <DependentUpon>202303260351148_AddMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

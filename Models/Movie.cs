@@ -14,6 +14,6 @@ namespace Vidly.Models
         public DateTime AddedDate { get; set; } // the day where the movie is added to the Database
         [Required]
         public Genre Genre { get; set; }
-        public byte GenreId { get; set; }
+        public int GenreId { get; set; }
     }
 }
