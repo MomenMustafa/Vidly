@@ -10,6 +10,7 @@
                 <li>@Html.ActionLink("Customers", "Index", "Customers", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Movies", "Index", "Movies", new { area = "" }, new { @class = "nav-link" })</li>
             </ul>
+                @Html.Partial("_LoginPartial")
         </div>
     </div>
 </nav>
