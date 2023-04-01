@@ -215,6 +215,10 @@
     <Compile Include="Migrations\202303312036045_SeedUsers.designer.cs">
       <DependentUpon>202303312036045_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304010043282_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\202304010043282_AddDrivingLicenseToApplicationUser.designer.cs">
+      <DependentUpon>202304010043282_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -605,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303312036045_SeedUsers.resx">
       <DependentUpon>202303312036045_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304010043282_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>202304010043282_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
