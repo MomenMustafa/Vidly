@@ -57,6 +57,7 @@ namespace Vidly.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Index()
         {
             if (User.IsInRole(RoleName.CanManageMovies))
@@ -65,6 +66,7 @@ namespace Vidly.Controllers
             return View("ReadOnlyList");
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Details(int id)
         {
             var genre = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
@@ -72,6 +74,7 @@ namespace Vidly.Controllers
         }
 
         [Route("movies/released/{year:regex(\\d{4}):range(2015,2020)}/{month:regex(\\d{2}):range(1,12)}")]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
@@ -92,6 +95,7 @@ namespace Vidly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
